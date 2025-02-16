@@ -563,7 +563,7 @@ class ARDisplayViewer extends HTMLElement {
     };
 
     // Use a queue or offline handling for stats if necessary
-    fetch("https://ardisplay.io/api/stats", {
+    fetch("https://www.ardisplay.io/api/stats", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -1347,14 +1347,14 @@ class ARDisplayViewer extends HTMLElement {
       let response;
       if (this.getAttribute("src")) {
         response = await fetch(
-          `https://ardisplay.io/api/3d-model?id=${this.getAttribute("src")}`
+          `https://www.www.ardisplay.io/api/3d-model?id=${this.getAttribute("src")}`
         );
       } else {
         if (url && url.endsWith("/")) {
           url = url.slice(0, -1);
         }
         response = await fetch(
-          `https://ardisplay.io/api/3d-model?url=${encodeBase64(url)}`
+          `https://www.ardisplay.io/api/3d-model?url=${encodeBase64(url)}`
         );
       }
       if (!response.ok) {
